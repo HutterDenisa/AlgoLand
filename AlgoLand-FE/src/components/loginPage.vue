@@ -19,8 +19,8 @@
             </div>
 
             <div id="loginButtonAndRegister">
-                <router-link id="LogInButtonContainer" to="/algoritms"><button id="LogInButton">Log in!</button></router-link>
-            <h2>Don't have an account? Register!</h2>
+                <button @click="loginUser" id="LogInButton">Log in!</button>
+                <router-link to="/register"><h2>Don't have an account? Register!</h2></router-link>
             </div>
 
         </div>
@@ -135,6 +135,8 @@
 
 
 <script>
+import axios from 'axios'
+import VueCookies from 'vue-cookies'
   export default {
     methods: {
       placeHolderRemover (inputId, placeHolderId, originalText) {
@@ -145,6 +147,30 @@
             document.getElementById(placeHolderId).innerText = originalText;
           }
       },
+      async loginUser(){
+        await axios(
+          {
+              
+            method:"GET",
+            url:"http://localhost:8000/api/user",
+            params :{
+              email: document.getElementById("usernameInput").value,
+              password: document.getElementById("passwordInput").value,
+            },
+            withCredentials: false,
+            'Content-Type': 'application/json'
+          }
+        ).then(res => {
+          alert("YOU DID THIS");
+          VueCookies.set('username', res.data.username,12222)
+          VueCookies.set('email', res.data.email,12222)
+          VueCookies.set('userStatus','loggedIn',12222)
+          this.$router.push("/algorithms");
+            console.log(res)
+        }).catch(e => {
+            alert("not exist")
+        })
     }
   }
+}
 </script>

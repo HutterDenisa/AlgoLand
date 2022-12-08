@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import homePage from "../components/homePage.vue";
 import loginPage from "../components/loginPage.vue";
-import algoritms from "../components/algoritms.vue";
+import registerPage from "../components/registerPage.vue";
+import algoritms from "../components/algoritms.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,11 +18,18 @@ const router = createRouter({
       name: "login",
       component: loginPage,
     },
-    {
-      path: "/algoritms",
-      name: "algoritms",
-      component: algoritms
-    },
+      {
+          path: "/register",
+          name: "register",
+          component: registerPage
+      },
+      {
+
+          path: "/algorithms",
+          name: "algorithms",
+          component: algoritms,
+
+      },
     {
       path: "/about",
       name: "about",

@@ -1,0 +1,34 @@
+{
+  "name": "pccraft",
+  "version": "1.0.0",
+  "description": "This webapp is destined to help the uneducated pc user that wishes to have a good pc at a decent price",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "generate-docs": "jsdoc -c jsdoc.conf.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GruescuDanziel/PcCraft.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GruescuDanziel/PcCraft/issues"
+  },
+  "homepage": "https://github.com/GruescuDanziel/PcCraft#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.15"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.6",
+    "nodemon": "^2.0.7"
+  }
+}
