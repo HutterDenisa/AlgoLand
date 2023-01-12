@@ -1,0 +1,32 @@
+{
+  "name": "algoland",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "ace": "^1.3.0",
+    "axios": "^1.2.1",
+    "codemirror": "^6.0.1",
+    "codemirror-editor-vue3": "^2.1.7",
+    "p5": "^1.5.0",
+    "vue": "^3.2.41",
+    "vue-codemirror": "^6.1.1",
+    "vue-cookies": "^1.8.2",
+    "vue-router": "^4.1.5",
+    "vue3-ace-editor": "^2.2.2",
+    "vue3-cookies": "^1.0.6"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "vite": "^3.1.8"
+  }
+}
